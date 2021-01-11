@@ -1,0 +1,8 @@
+#include "map.bgt"
+#include "square.bgt"
+#include "resource.bgt"
+
+
+void main() {
+alert("started", "");
+}

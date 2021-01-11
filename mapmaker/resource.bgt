@@ -1,0 +1,9 @@
+class Resource {
+string name;
+uint amount;
+
+Resource(string name, uint amount) {
+this.name = name;
+this.amount = amount;
+}
+}

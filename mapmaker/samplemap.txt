@@ -1,0 +1,46 @@
+title 5003 3001
+objective 5101
+
+square_width 16
+nb_columns 9
+nb_lines 9
+nb_meadows_by_square 16
+nb_players_min 2
+nb_players_max 4
+global_food_limit 5000
+starting_squares a1 a9 i1 i9
+starting_units townhall 50 peasant 80 farm warehouse 100 knight
+starting_resources 500000 500000 500000 500000
+
+additional_meadows a1 a1 a1 a1 a1 a1 a1 a1 a1 a1 a1 a1
+additional_meadows i1 i1 i1 i1 i1 i1 i1 i1 i1 i1 i1 i1
+additional_meadows i9 i9 i9 i9 i9 i9 i9 i9 i9 i9 i9 i9
+additional_meadows a9 a9 a9 a9 a9 a9 a9 a9 a9 a9 a9 a9
+additional_meadows b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1
+additional_meadows h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1
+additional_meadows b9 b9 b9 b9 b9 b9 b9 b9 b9 b9 b9 b9
+additional_meadows h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 h9
+goldmine 1500 d3 f3 d7 f7
+goldmine 400 b1 h1 b9 h9
+goldmine 700 c3 g3 c7 g7
+wood 1500 d3 f3 d7 f7
+goldmine 50000 e5
+wood 500 a2 a3 a7 a8 
+wood 500 b1 b2 b3 b7 b8 b9
+wood 500 c1 c2 c3 c7 c8 c9
+wood 200 d1 d2 d3 d7 d8 d9
+wood 100 e1 e2 e3 e7 e8 e9
+wood 200 f1 f2 f3 f7 f8 f9
+wood 500 g1 g2 g3 g7 g8 g9
+wood 500 h1 h2 h3 h7 h8 h9
+wood 500 i2 i3 i7 i8
+ironmine 2000 b1 h1 b9 h9
+quarry 2000 b1 h1 b9 h9
+
+terrain _meadows a1 a2 a3 a7 a8 a9 b1 b2 b3 b7 b8 b9 c1 c2 c3 c7 c8 c9 d1 d2 d3 d7 d8 d9 e1 e2 e3 e7 e8 e9 f1 f2 f3 f7 f8 f9 g1 g2 g3 g7 g8 g9 h1 h2 h3 h7 h8 h9 i2 i3 i7 i8 i9
+terrain mountain e5
+terrain river a4 a5 a6 b4 b5 b6 c4 c5 c6 d4 d5 d6 e4 e6 f4 f5 f6 g4 g5 g6 h4 h5 h6 i4 i5 i6
+water a4 a5 a6 b4 b5 b6 c4 c5 c6 d4 d5 d6 e4 e6 f4 f5 f6 g4 g5 g6 h4 h5 h6 i4 i5 i6
+remove_meadows a4 a4 a4 a4 a5 a5 a5 a5 a6 a6 a6 a6 b4 b4 b4 b4 b5 b5 b5 b5 b6 b6 b6 b6 c4 c4 c4 c4 c5 c5 c5 c5 c6 c6 c6 c6 d4 d4 d4 d4 d5 d5 d5 d5 d6 d6 d6 d6 e4 e4 e4 e4 e6 e6 e6 e6 f4 f4 f4 f4 f5 f5 f5 f5 f6 f6 f6 f6 g4 g4 g4 g4 g5 g5 g5 g5 g6 g6 g6 g6 h4 h4 h4 h4 h5 h5 h5 h5 h6 h6 h6 h6 i4 i4 i4 i4 i5 i5 i5 i5 i6 i6 i6 i6
+west_east path a1 a2 a3 a7 a8 a9 b1 b2 b3 b7 b8 b9 c3 c7 d1 d2 d3 d7 d8 d9 e1 e2 e3 e7 e8 e9 f3 f7 g1 g2 g3 g7 g8 g9 h1 h2 h3 h7 h8 h9
+south_north path a2 a7 c1 c8 d1 d2 d7 d8 e1 e2 e7 e8 f1 f2 f7 f8 g1 g8 i2 i7

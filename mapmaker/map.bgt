@@ -1,0 +1,30 @@
+class Map {
+int[] title = {5003, 3001};
+int[] objective = {5101};
+int nb_players_min = 2;
+int nb_players_max = 2;
+int global_food_limit = 200;
+int square_width = 12;
+int nb_lines;
+int nb_columns;
+int nb_meadows_by_square = 4;
+Square@[][] squares;
+
+Map(int columns, int lines, int meadows_by_square) {
+this.nb_columns = columns;
+this.nb_lines = lines;
+this.nb_meadows_by_square = meadows_by_square;
+
+// squares initialization
+squares.resize(columns);
+for(int i = 0; i < columns; ++i) {
+squares[i].resize(lines);
+for(int j = 0; j < lines; ++j) {
+@squares[i][j] = Square(i, j, meadows_by_square);
+}
+}
+
+
+}
+
+}
