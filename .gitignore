@@ -4,3 +4,4 @@
 /doc
 /.mypy_cache
 /.venv
+*.exe
