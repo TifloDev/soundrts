@@ -1,3 +1,5 @@
+const int a_ascii_code = 97;
+
 class Square {
 string terrain = "";
 int meadows;
@@ -10,5 +12,10 @@ Square(int x, int y, int meadows) {
 this.x = x;
 this.y = y;
 this.meadows = meadows;
+}
+
+string coordinates() {
+string letter = ascii_to_character(a_ascii_code + this.x);
+return letter + (this.y + 1);
 }
 }
