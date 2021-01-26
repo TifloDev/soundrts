@@ -4,6 +4,8 @@ def messages
 the_queue_is_full 143
 not_enough_resource_0 135 131
 not_enough_resource_1 135 132
+not_enough_resource_2 135 1321
+not_enough_resource_3 135 1322
 not_enough_food 135 133
 population_limit_reached 4246
 production_deferred 142
@@ -20,6 +22,8 @@ requires 129
 and 23
 resource_0_title 131
 resource_1_title 132
+resource_2_title 1321
+resource_3_title 1322
 food_title 133
 recommended_maps jl8 jl7 jl6 jl5
 
@@ -691,6 +695,20 @@ title 80
 color forestgreen
 noise repeat 6 1055 1056 1057 1058 9999 9999
 ground leaves
+
+def ironmine
+is_a resource_deposit
+title 811
+color gold
+exhausted 1047
+ground gravel
+
+def quarry
+is_a resource_deposit
+title 812
+color gold
+exhausted 1047
+ground gravel
 
 def meadow
 is_a thing
