@@ -1,7 +1,0 @@
-﻿; coding: utf-8
-
-7000 ošipáreň
-7001 kasáreň
-7002 veľká sála
-7003 otrok
-7004 reváč
