@@ -22,7 +22,7 @@ class faction
 ; misc parameters
 
 def parameters
-nb_of_resource_types 2 ; gold and wood
+nb_of_resource_types 4
 minimal_damage 0.17
 
 
@@ -39,6 +39,18 @@ class deposit
 resource_type 1 ; wood
 extraction_time 20
 extraction_qty 2
+
+def ironmine
+class deposit
+resource_type 2 ; iron
+extraction_time 5
+extraction_qty 3
+
+def quarry
+class deposit
+resource_type 3 ; stone
+extraction_time 10
+extraction_qty 4
 
 
 ; abilities (passive or active)
@@ -218,7 +230,7 @@ food_cost 1
 time_cost 10
 hp_max 4
 speed 1.5
-can_build farm barracks lumbermill blacksmith wall gate scouttower townhall stables workshop dragonslair magestower temple necropolis shipyard
+can_build farm warehouse barracks lumbermill blacksmith wall gate scouttower townhall stables workshop dragonslair magestower temple necropolis shipyard
 ;can_use a_improved_wood_gathering
 range 0.8
 cooldown 1
@@ -226,7 +238,7 @@ damage 1.5
 
 def footman
 class soldier
-cost 6 0
+cost 6 0 3 0
 food_cost 1
 time_cost 12
 hp_max 15
@@ -258,7 +270,7 @@ is_undead 1
 
 def archer
 class soldier
-cost 5 1
+cost 5 2 0 0
 food_cost 1
 time_cost 15
 hp_max 10
@@ -275,7 +287,7 @@ can_upgrade_to darkarcher
 
 def darkarcher
 class soldier
-cost 10 5 ; this is the total cost
+cost 10 5 3 0
 food_cost 1
 time_cost 75 ; this is the total cost
 hp_max 12
@@ -309,7 +321,7 @@ is_undead 1
 
 def knight
 class soldier
-cost 15 0
+cost 15 0 10 0
 food_cost 2
 time_cost 20
 hp_max 45
@@ -326,7 +338,7 @@ transport_volume 2
 
 def catapult
 class soldier
-cost 15 10
+cost 15 10 12 5
 food_cost 2
 time_cost 30
 hp_max 30
@@ -345,7 +357,7 @@ corpse 0
 
 def dragon
 class soldier
-cost 15 10
+cost 15 10 4 0
 food_cost 3
 time_cost 15
 airground_type air
@@ -409,7 +421,7 @@ transport_volume 2
 
 def new_flyingmachine
 class soldier
-cost 5 5
+cost 5 5 10
 food_cost 1
 time_cost 10
 airground_type air
@@ -417,14 +429,14 @@ hp_max 30
 speed 1.5
 is_repairable 1
 is_healable 0
-transport_capacity 8
+transport_capacity 10
 transport_volume 99
 is_a_detector 1
 corpse 0
 
 def flyingmachine
 class soldier
-cost 20 10
+cost 20 10 20 10
 food_cost 3
 time_cost 30
 airground_type air
@@ -442,7 +454,7 @@ corpse 0
 
 def boat
 class soldier
-cost 5 5
+cost 5 15
 food_cost 1
 time_cost 10
 airground_type water
@@ -450,13 +462,13 @@ hp_max 30
 speed 1.5
 is_repairable 1
 is_healable 0
-transport_capacity 8
+transport_capacity 10
 transport_volume 99
 corpse 0
 
 def destroyer
 class soldier
-cost 11 4
+cost 11 20 5
 food_cost 2
 time_cost 14
 requirements lumbermill
@@ -477,7 +489,7 @@ corpse 0
 
 def battleship
 class soldier
-cost 15 10
+cost 15 30 12
 food_cost 3
 time_cost 30
 requirements lumbermill workshop
@@ -498,7 +510,7 @@ corpse 0
 
 def submarine
 class soldier
-cost 11 4
+cost 11 6 10
 food_cost 1
 time_cost 14
 hp_max 43;  130/3
@@ -520,9 +532,17 @@ is_a_detector 1
 
 ; buildings
 
+
+def warehouse
+class building
+cost 0 30 20 35
+hp_max 400
+storable_resource_types 0 1 2 3
+time_cost 45
+
 def farm
 class building
-cost 5 5
+cost 0 5 3 2
 food_provided 8; 4 * 2
 hp_max 133.3;  400/3
 time_cost 45
@@ -530,7 +550,7 @@ requirements townhall
 
 def lumbermill
 class building
-cost 6 9
+cost 0 9 0 6
 food_provided 0
 hp_max 200;  600/3
 time_cost 68
@@ -541,7 +561,7 @@ storage_bonus 0 1 ; gold bonus is +0, wood bonus is +1
 
 def barracks
 class building
-cost 7 9
+cost 7 9 10 5
 food_provided 0
 hp_max 266.7;  800/3
 time_cost 90
@@ -550,18 +570,18 @@ can_train footman archer knight
 
 def townhall
 class building
-cost 12 16
+cost 12 16 15 20
 food_provided 1
 hp_max 400;  1200/3
 time_cost 135
 heal_level 1
-storable_resource_types 0 1
+storable_resource_types 0 1 2 3
 can_train peasant
 can_upgrade_to keep
 
 def keep
 class building
-cost 22 31 ; this is the total cost
+cost 22 31 30 40
 time_cost 315 ; this is the total cost
 hp_max 800
 heal_level 2
@@ -571,7 +591,7 @@ is_a townhall
 
 def castle
 class building
-cost 42 61 ; this is the total cost
+cost 42 61 65 84
 time_cost 675 ; this is the total cost
 hp_max 1600
 heal_level 4
@@ -581,9 +601,10 @@ is_a keep
 
 def blacksmith
 class building
-cost 8 10
+cost 8 10 20 20
 food_provided 0
 hp_max 266.7;  800/3
+storable_resource_types 2
 time_cost 90
 requirements townhall
 can_research melee_weapon melee_armor
@@ -599,7 +620,7 @@ can_research horse_speed
 
 def workshop
 class building
-cost 10 15
+cost 10 15 20 12
 food_provided 0
 hp_max 266.7;  800/3
 time_cost 90
@@ -608,7 +629,7 @@ can_train catapult new_flyingmachine flyingmachine
 
 def dragonslair
 class building
-cost 15 20
+cost 15 20 10 30
 food_provided 0
 hp_max 266.7;  800/3
 time_cost 90
@@ -617,7 +638,7 @@ can_train dragon
 
 def magestower
 class building
-cost 15 20
+cost 35 20 10 12
 food_provided 0
 hp_max 266.7;  800/3
 time_cost 90
@@ -627,7 +648,7 @@ can_research u_recall u_summon_dragon u_meteors
 
 def temple
 class building
-cost 10 30
+cost 20 40 0 20
 food_provided 0
 hp_max 300
 time_cost 90
@@ -637,7 +658,7 @@ can_research superhealer u_exorcism u_conversion u_resurrection
 
 def necropolis
 class building
-cost 10 30
+cost 20 40 20 0
 food_provided 0
 hp_max 300
 time_cost 90
@@ -647,7 +668,7 @@ can_research u_deadly_fog
 
 def scouttower
 class building
-cost 6 2
+cost 6 2 4 4
 hp_max 33;  100/3
 time_cost 60
 bonus_height 1
@@ -657,7 +678,7 @@ provides_survival 0
 
 def guardtower
 class building
-cost 11 4
+cost 11 6 6 6
 requirements lumbermill
 hp_max 43;  130/3
 time_cost 140
@@ -674,7 +695,7 @@ provides_survival 0
 
 def cannontower
 class building
-cost 16 5
+cost 16 8 10 12
 requirements blacksmith
 hp_max 53;  160/3
 time_cost 190
@@ -692,7 +713,7 @@ provides_survival 0
 
 def wall
 class building
-cost 7 9
+cost 0 9 0 11
 food_provided 0
 hp_max 500
 time_cost 90
@@ -702,7 +723,7 @@ can_upgrade_to massive_wall
 
 def massive_wall
 class building
-cost 21 27
+cost 27 12 30
 food_provided 0
 hp_max 2000
 time_cost 270
@@ -712,7 +733,7 @@ requirements keep
 
 def gate
 class building
-cost 10 10
+cost 10 10 10 10
 food_provided 0
 hp_max 450
 time_cost 90
@@ -723,7 +744,7 @@ can_upgrade_to massive_gate
 
 def massive_gate
 class building
-cost 30 30
+cost 30 30 30 30
 food_provided 0
 hp_max 1800
 time_cost 270
@@ -734,7 +755,7 @@ requirements keep
 
 def shipyard
 class building
-cost 10 15
+cost 20 15 34 28
 food_provided 0
 hp_max 266.7;  800/3
 time_cost 90

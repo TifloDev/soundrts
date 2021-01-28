@@ -200,6 +200,9 @@ shortcut e
 
 ; upgrades
 
+def swimming
+title swimming
+
 def melee_weapon
 title 4215
 
@@ -410,6 +413,14 @@ color hotpink
 noise repeat 15 1050
 shortcut f
 
+def warehouse
+is_a building
+title 883
+color brown
+;noise repeat 15 1050
+shortcut f
+
+
 def lumbermill
 is_a building
 title 148
@@ -529,10 +540,14 @@ title 85
 color brown
 noise_when_exploiting_goldmine repeat 1.6 1038 ; 1081
 noise_when_exploiting_wood repeat 1.5 1034 1035 1036 1037
+noise_when_exploiting_ironmine repeat 1.5 11035
+noise_when_exploiting_quarry repeat 11036
 noise_when_building repeat 4 1046 1048 1049
 attack_hit 1008
 store_resource_0 1099
 store_resource_1 1098
+store_resource_2 11041
+store_resource_3 11042
 keyboard worker
 shortcut p
 
@@ -700,14 +715,14 @@ def ironmine
 is_a resource_deposit
 title 811
 color gold
-exhausted 1047
+;exhausted 1047
 ground gravel
 
 def quarry
 is_a resource_deposit
 title 812
 color gold
-exhausted 1047
+exhausted 11051
 ground gravel
 
 def meadow

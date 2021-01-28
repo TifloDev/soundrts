@@ -15,8 +15,10 @@
 
 z: resource_status 0
 x: resource_status 1
-c: food_status
-v: unit_hp_status
+c: resource_status 2
+v: resource_status 3
+b: food_status
+n: unit_hp_status
 
 LCTRL: examine
 RCTRL: examine
