@@ -1,34 +1,33 @@
-Making AIs Tutorial
+Инструкция по созданию игроков, управляемых компьютером
 ===================
 
 .. contents::
 
-1. Introduction
+1. Вступление
 ---------------
 
-This tutorial will explain the basics of creating AIs.
-You'll need to edit the ai.txt file.
-This file can be found on the "res" folder in the SoundRTS zip file.
+Эта инструкция объясняет основы создания управляемых компьютером игроков.
+Вам будет необходимо редактировать файл ai.txt.
+Этот файл можно найти в папке "res" в архиве SoundRTS.
 
-2. Constants
+2. Константы
 ------------
 
-Before the "def" of the AI, you'll see some text like:
-research 1, teleportation 1... Etc.
-These constants will control the behavior of the AI, and can be 0 or 1.
-Here are all of the constants.
+Перед определением искусственного интеллекта ("def") вы найдёте текст, похожий на следующее:
+research 1, teleportation 1... И так далее.
+Эти константы управляют поведением ИИ и могут принимать значения 0 или 1.
+Ниже приведён полный список констант.
 
-- constant_attacks - The AI will constantly attack and explore the map.
-- research - The AI will research the weapons and armors.
+- constant_attacks - ИИ будет постоянно атаковать и исследовать карту.
+- research - ИИ будет выполнять все доступные исследования оружия и брони.
 
-3. The "get" command
+3. Команда "get"
 --------------------
 
-The "get" command will take the number of the units and its names as
-arguments to recruit the units.
-You can define more than one unit number and type.
+Команда "get" нанимает юнитов и принимает в качестве аргументов требуемое количество юнитов и их названия.
+Возможно определить более, чем один тип юнитов.
 
-Example:
+Пример:
 "get 10 footman 20 archer 10 knight"
 
-See the "rules.txt" file for the exact unit type names.
+Смотрите файл "rules.txt", чтобы узнать точные названия юнитов.
