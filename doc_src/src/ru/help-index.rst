@@ -2,13 +2,13 @@
 
    <script type="text/javascript" src="langdir.js"></script> 
 
-Documentation
-=============
+Документация
+============
 
-- `Release notes <relnotes.htm>`_
-- `Game manual <manual.htm>`_
-- `Units guide <units.htm>`_
-- `Map making guide <mapmaking.htm>`_
-- `Modding guide <modding.htm>`_ (work in progress)
-- `Making AIs Tutorial <aimaking.htm>`_
-- `Standalone server guide <server.htm>`_
+- `Заметки о выпуске <relnotes.htm>`_
+- `Мануал по игре <manual.htm>`_
+- `Инструкция по юнитам <units.htm>`_
+- `Создание карт <mapmaking.htm>`_
+- `Создание модов <modding.htm>`_ (work in progress)
+- `Инструкция по созданию управляемых компьютером игроков <aimaking.htm>`_
+- `Инструкция по запуску собственного сервера <server.htm>`_
