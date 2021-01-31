@@ -33,8 +33,11 @@
 79	in a meadow rounded with trees
 80	wood
 81	gold mine
+811 mine
+812 quary
 82	town hall
 83	farm
+883 warehouse
 84	a path
 85	peasant
 86	footman
@@ -74,6 +77,8 @@
 130	units
 131	gold
 132	wood
+1321 iron
+1322 stone
 133	food
 134	contains
 135	not enough
@@ -196,7 +201,7 @@
 4005	failure
 4006	success!
 4007	please make a selection
-4008	please send comments to jlpo@free.fr
+4008	please send your comments to support@SoundRTS.ru
 4009	Quit
 4010	Menu
 4011	continue
@@ -219,16 +224,16 @@
 4029	main menu
 4030	please make a selection
 4031	single player,
-4032	play on your computer
+4032	_
 4033	multiplayer,
-4034	play on the Internet
-4035	server,
-4036	launch a server on your computer to host multiplayer games
+4034	_
+4035	create server,
+4036	_
 4037	options,
-4038	modify your parameters
+4038	_
 
 4041	quit,
-4042	quit this program
+4042	_
 4043	what kind of server?
 4044	simple server
 4045	only you can create games
