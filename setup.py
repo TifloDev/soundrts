@@ -17,6 +17,7 @@ from cx_Freeze import Executable, setup
 
 import builddoc
 import buildmultimapslist
+import clean
 from soundrts.version import VERSION
 
 if platform.system() == "Windows" and ".venv" not in sys.executable:
@@ -43,6 +44,7 @@ executables = [
     Executable("server.py", base=None),
 ]
 
+clean.clean()
 buildmultimapslist.build()
 builddoc.build()
 if os.path.exists(destination):
