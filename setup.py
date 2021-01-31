@@ -28,8 +28,7 @@ try:
 except FileNotFoundError:
     print("WARNING: couldn't get version from git.")
     full_version = f"{VERSION}-unknown"
-TMP = os.environ["TMP"]
-destination = rf"{TMP}\soundrts-{VERSION}-windows"
+destination = rf"./.build/{VERSION}"
 build_exe_options = {
     "build_exe": destination,
     "optimize": 1,
@@ -59,7 +58,6 @@ print("Creating empty user folder...")
 os.mkdir(rf"{destination}\user")
 print(r"Resetting cfg\language.txt ...")
 open(rf"{destination}\cfg\language.txt", "w").write("")
-Popen(rf'explorer /select,"{destination}"')
 print("Adding full_version.txt ...")
 with open(rf"{destination}\lib\full_version.txt", "w") as t:
     t.write(full_version)
