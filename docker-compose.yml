@@ -1,7 +1,7 @@
-version: "2.0.1"
+version: "3.0"
 services:
   soundrts:
-    image: soundrts:testing
-    ports: ["2500:2500"]
+    build: .
+    ports: ["2500:2500/tcp", "2500:2500/udp"]
     volumes:
-        - ./user:/usr/src/soundrts/user
+        - ./user:/soundrts/user
