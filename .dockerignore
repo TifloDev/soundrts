@@ -1,0 +1,13 @@
+.git
+*.pyc
+/doc_src/src/*/stats.inc
+/user
+/doc
+/doc_src
+/single
+/.mypy_cache
+/.venv
+.gitignore
+.dockerignore
+.gitattributes
+*.exe

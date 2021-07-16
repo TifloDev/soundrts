@@ -1,0 +1,7 @@
+version: "3.0"
+services:
+  soundrts:
+    build: .
+    ports: ["2500:2500/tcp", "2500:2500/udp"]
+    volumes:
+        - ./user:/soundrts/user
