@@ -8,4 +8,6 @@
 /.mypy_cache
 /.venv
 .gitignore
+.dockerignore
+.gitattributes
 *.exe
